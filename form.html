@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form</title>
+</head>
+<body>
+<h1 class="heading form-heading">Форма для составления подходящего тарифа</h1>
+<form action="/handler.php" method="post">
+    <label class="form-qu"> Имя контактного лица:
+        <input type="text" name="clientName">
+    </label>
+    <hr>
+    <label class="form-qu"> Телефон контактного лица:
+        <input type="tel" name="clientTel">
+    </label>
+    <hr>
+    <label class="form-qu"> Почта контактного лица:
+        <input type="email" name="clientEmail">
+    </label>
+    <hr>
+    <label class="form-qu">Выберите из списка виды деятельности вашей организации
+        <select class="selectMult" multiple name="listOfWorking" id="">
+            <option value="1">Производство товаров</option>
+            <option value="2">Оказание услуг</option>
+            <option value="3">Информационная</option>
+            <option value="4">Научно-техническая</option>
+            <option value="5">Товарные биржи</option>
+            <option value="6">Другое</option>
+        </select>
+    </label>
+    <hr>
+    <p class="form-qu">Какие операции планируете совершать в Интернет-банке?</p>
+    <label><p><input type="checkbox" name="typeOfGoals" value="Валютные платежи">Валютные платежи</p></label>
+    <label><p><input type="checkbox" name="typeOfGoals" value="Аккредитив">Аккредитив</p></label>
+    <label><p><input type="checkbox" name="typeOfGoals" value="Рублевые платежи">Рублевые платежи</p></label>
+    <label><p><input type="checkbox" name="typeOfGoals" value="Эквайринг">Эквайринг</p></label>
+    <label><p><input type="checkbox" name="typeOfGoals" value="Другое">Другое</p></label>
+    <hr>
+    <p class="form-qu">Выберите Вашу организационно-правовую форму</p>
+    <label><input type="radio" name="FormOfFirm">ООО</label>
+    <label><input type="radio" name="FormOfFirm">АО</label>
+    <label><input type="radio" name="FormOfFirm">ИП</label>
+    <label><input type="radio" name="FormOfFirm">Самозанятый</label>
+    <hr>
+    <label class="form-qu">Какой способ связи Вам редпочтителен?
+        <select name="WayOfConnection">
+            <option value="1">Телефон</option>
+            <option value="2">Электронная почта</option>
+            <option value="3">Личная встреча</option>
+        </select>
+    </label>
+    <hr>
+    <button class="btn" type="submit">Отправить</button>
+</form>
+<a href="/index.html" class="backLink">Вернуться на главную страницу</a>
+</body>
+</html>
